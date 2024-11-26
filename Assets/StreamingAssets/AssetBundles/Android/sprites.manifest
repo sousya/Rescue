@@ -1,0 +1,96 @@
+ManifestFileVersion: 0
+CRC: 2537230360
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cfdeddc6eb4d91a61c4443eca4140d17
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f1997500b689d27a0d48e20b2d184a06
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: cfdeddc6eb4d91a61c4443eca4140d17
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/Sprites/shuihua/showShuihua.anim
+- Assets/Resources/Sprites/ShowIcon/show17.png
+- Assets/Resources/Sprites/Rope/rope1.png
+- Assets/Resources/Sprites/Rope/rope2.png
+- Assets/Resources/Sprites/ShowIcon/show6.png
+- Assets/Resources/Sprites/ShowIcon/show15.png
+- Assets/Resources/Sprites/jia.png
+- Assets/Resources/Sprites/tongguan.png
+- Assets/Resources/Sprites/jindutiaodi.png
+- Assets/Resources/Sprites/Unlimited.png
+- Assets/Resources/Sprites/caidai1.png
+- Assets/Resources/Sprites/shoufei.png
+- Assets/Resources/Sprites/ShowIcon/show1.png
+- Assets/Resources/Sprites/clear3.png
+- Assets/Resources/Sprites/ShowIcon/show26.png
+- Assets/Resources/Sprites/ShowIcon/show22.png
+- Assets/Resources/Sprites/ShowIcon/show23.png
+- Assets/Resources/Sprites/shuihua/shui4.png
+- Assets/Resources/Sprites/ShowIcon/show9.png
+- Assets/Resources/Sprites/jixu.png
+- Assets/Resources/Sprites/shuihua/Shuihua.controller
+- Assets/Resources/Sprites/di 1.png
+- Assets/Resources/Sprites/Click/click6.png
+- Assets/Resources/Sprites/daaixin.png
+- Assets/Resources/Sprites/di.png
+- Assets/Resources/Sprites/ShowIcon/show16.png
+- Assets/Resources/Sprites/ShowIcon/show25.png
+- Assets/Resources/Sprites/tiaoguang.png
+- Assets/Resources/Sprites/ShowIcon/show5.png
+- Assets/Resources/Sprites/ShowIcon/show20.png
+- Assets/Resources/Sprites/shijian.png
+- Assets/Resources/Sprites/Rope/rope3.png
+- Assets/Resources/Sprites/Excellent.png
+- Assets/Resources/Sprites/shou.png
+- Assets/Resources/Sprites/ShowIcon/show18.png
+- Assets/Resources/Sprites/ShowIcon/show3.png
+- Assets/Resources/Sprites/jingdutiaoyuan.png
+- Assets/Resources/Sprites/shuihua/shui1.png
+- Assets/Resources/Sprites/ShowIcon/show19.png
+- Assets/Resources/Sprites/heart-shop.png
+- Assets/Resources/Sprites/caidai.png
+- Assets/Resources/Sprites/caidai2.png
+- Assets/Resources/Sprites/ShowIcon/show12.png
+- Assets/Resources/Sprites/Click/click2.png
+- Assets/Resources/Sprites/Click/click3.png
+- Assets/Resources/Sprites/shuihua/shui2.png
+- Assets/Resources/Sprites/ShowIcon/show14.png
+- Assets/Resources/Sprites/HELP.png
+- Assets/Resources/Sprites/ShowIcon/show13.png
+- Assets/Resources/Sprites/jindutiao4.png
+- Assets/Resources/Sprites/shuihua/shui3.png
+- Assets/Resources/Sprites/Click/click1.png
+- Assets/Resources/Sprites/ShowIcon/show7.png
+- Assets/Resources/Sprites/Click/click5.png
+- Assets/Resources/Sprites/ShowIcon/show10.png
+- Assets/Resources/Sprites/ShowIcon/show11.png
+- Assets/Resources/Sprites/ShowIcon/show21.png
+- Assets/Resources/Sprites/ShowIcon/show24.png
+- Assets/Resources/Sprites/jindutia.png
+- Assets/Resources/Sprites/aixin.png
+- Assets/Resources/Sprites/guanggao.png
+- Assets/Resources/Sprites/guangqia.png
+- Assets/Resources/Sprites/Click/click4.png
+- Assets/Resources/Sprites/guanbi.png
+- Assets/Resources/Sprites/clear2.png
+- Assets/Resources/Sprites/clear1.png
+- Assets/Resources/Sprites/jindutiao.png
+- Assets/Resources/Sprites/ShowIcon/show8.png
+- Assets/Resources/Sprites/ShowIcon/show4.png
+- Assets/Resources/Sprites/ShowIcon/show2.png
+- Assets/Resources/Sprites/chongzhi.png
+Dependencies: []

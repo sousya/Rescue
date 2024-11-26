@@ -6,11 +6,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoorCtrl: MonoBehaviour, IController
+public class DoorCtrl: MonoBehaviour, IController, ICanSendEvent
 {
     [SerializeField] float enterTime = 1f;
     [SerializeField] bool isCheck = false;
     [SerializeField] LayerMask layerMask;
+    [SerializeField] GameObject CloseBox, OpenBox;
     public IArchitecture GetArchitecture()
     {
         return GameMainArc.Interface;
@@ -32,16 +33,31 @@ public class DoorCtrl: MonoBehaviour, IController
                     playerCtrl.SetUseGravity(false);
                     player.DOKill();
 
-                    Tweener tweener = player.DOMove(new Vector3(player.position.x, player.position.y, player.position.z + 1), enterTime);
-                    tweener.OnComplete(() =>
-                    {
-                        Debug.Log("通关");
-                    });
-                    tweener.SetEase(Ease.Linear);
+                    playerCtrl.PlayAnim("kaibaoxiang");
+                    CloseBox.SetActive(false);
+                    OpenBox.SetActive(true);
+                    this.SendEvent<LevelClearEvent>();
+
+                    StartCoroutine(WaitWin(playerCtrl));
+                    //Tweener tweener = player.DOMove(new Vector3(player.position.x, player.position.y, player.position.z + 1), enterTime);
+                    //tweener.OnComplete(() =>
+                    //{
+                    //    Debug.Log("通关");
+                    //});
+                    //tweener.SetEase(Ease.Linear);
 
                 }
             }
 
+        }
+    }
+
+    IEnumerator WaitWin(PlayerCtrl playerCtrl)
+    {
+        yield return new WaitForSeconds(1.2f);
+        if(!playerCtrl.isDeath)
+        {
+           LevelManager.Instance.LevelClear();
         }
     }
 

@@ -9,3 +9,12 @@ public struct RefreshUITextEvent
 {
 
 }
+
+public struct LevelStartEvent
+{
+}
+
+public struct LoadRawImage
+{
+
+}

@@ -16,8 +16,9 @@ public class MoveObjCtrl: MonoBehaviour, IController
     [SerializeField]
     List<Transform> movePoints = new List<Transform>();
     [SerializeField]
-    bool startMove = true, needRotate = false;
+    bool startMove = true, needRotate = false, moveWait = false;
     int nowMoveTo = 0;
+    public float waitTime = 1;
 
     public IArchitecture GetArchitecture()
     {
@@ -60,15 +61,33 @@ public class MoveObjCtrl: MonoBehaviour, IController
                 rotateTwenner.SetEase(Ease.Linear);
                 rotateTwenner.OnComplete(() =>
                 {
-                    SetMove();
+                    if(!moveWait)
+                    {
+                        SetMove();
+                    }
+                    else
+                    {
+                        StartCoroutine(WaitSetMove());
+                    }
                 });
             }
             else
             {
-                SetMove();
+                if (!moveWait)
+                {
+                    SetMove();
+                }
+                else
+                {
+                    StartCoroutine(WaitSetMove());
+                }
             }
         });
     }
 
-   
+   IEnumerator WaitSetMove()
+    {
+        yield return new WaitForSeconds(waitTime);
+        SetMove();
+    }
 }

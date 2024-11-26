@@ -1,0 +1,217 @@
+ManifestFileVersion: 0
+CRC: 4077097798
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 31befdc196034ad18af2b9b1b9df653b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 76932a07848a2bd7afb6bb77b5905795
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 31befdc196034ad18af2b9b1b9df653b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 34cd21a5da91ff74f8db5247e682d39f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/Model/diaoban/diaoban.FBX
+- Assets/Resources/Model/CrossbowShooter/nushou.fbx
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@daiji.fbx
+- Assets/Resources/Model/Spring/Bounce.anim
+- Assets/Resources/Model/Ball/wanjuqiu.FBX
+- Assets/Resources/Model/GemTrigger/gem.fbx
+- Assets/Resources/Model/Lion/shizi@gongji.FBX
+- Assets/Resources/Model/OneSpike/jianci_posun.prefab
+- Assets/Resources/Model/Wolf/lang.FBX
+- Assets/Resources/Model/WindMachine/chuifengji_posun.FBX
+- Assets/Resources/Model/AxisFloor/muban@duichen.FBX
+- Assets/Resources/Model/Bear/baixiong@chi.FBX
+- Assets/Resources/Model/RotationSpike/xuanzhuanmuci@xuanzhuan.fbx
+- Assets/Resources/Model/Player/zhujue.prefab
+- Assets/Resources/Model/Vampire/vampire.controller
+- Assets/Resources/Model/Knight/kulou@fuhuo.FBX
+- Assets/Resources/Model/GemTrigger/baoshijiguan.FBX
+- Assets/Resources/Model/Player/Guide.controller
+- Assets/Resources/Model/Light/deng_kaiguan.FBX
+- Assets/Resources/Model/OneSpike/jianci_posun.controller
+- Assets/Resources/Model/Vampire/Change.anim
+- Assets/Resources/Model/Vampire/xixuegui@daiji.fbx
+- Assets/Resources/Model/Knight/kulou@daiji.fbx
+- Assets/Resources/Model/Ghost/youhun@gongji.FBX
+- Assets/Resources/Model/Box/muxiang.FBX
+- Assets/Resources/Model/Spring/Spring.controller
+- Assets/Resources/Model/Player/zhujue@tiaoyue.fbx
+- Assets/Resources/Model/Knight/kulou@gongji.FBX
+- Assets/Resources/Model/Lion/shizi.FBX
+- Assets/Resources/Model/Shooter/shouqiangshou@tiaoyue.fbx
+- Assets/Resources/Model/Bomb/zhadan.FBX
+- Assets/Resources/Model/Spike/jianci_posun.FBX
+- Assets/Resources/Model/Player/zhujue@kaiqiang.fbx
+- Assets/Resources/Model/Player/zhujue@siwang3.fbx
+- Assets/Resources/Model/Player/zhujue.controller
+- Assets/Resources/Model/Eagle/ying.controller
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou.fbx
+- Assets/Resources/Model/Vampire/xixuegui.FBX
+- Assets/Resources/Model/Player/PlayerHelp.anim
+- Assets/Resources/Model/Eagle/ying@fuchong.FBX
+- Assets/Resources/Model/Rope/zhuazi.fbx
+- Assets/Resources/Model/Flower/shirenhua@daiji.fbx
+- Assets/Resources/Model/Shooter/shouqiangshou.fbx
+- Assets/Resources/Model/Bear/baixiong@gongji.FBX
+- Assets/Resources/Model/Ghost/youhun.controller
+- Assets/Resources/Model/Block/juma_pohuai.FBX
+- Assets/Resources/Model/Lion/shizi@zhuanshen.FBX
+- Assets/Resources/Model/Clear.controller
+- Assets/Resources/Model/Shooter/shouqiangshou@daiji.fbx
+- Assets/Resources/Model/Block/juma.FBX
+- Assets/Resources/Model/Electric/dianwang.FBX
+- Assets/Resources/Model/Rope/zhuazi (1).controller
+- Assets/Resources/Model/AxisFloor/muban@buduichen.FBX
+- Assets/Resources/Model/Tengwan/idle.anim
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou.controller
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@tiaoyue.fbx
+- Assets/Resources/Model/CrossbowShooter/nushou@daiji.fbx
+- Assets/Resources/Model/Flower/shirenhua.controller
+- Assets/Resources/Model/WaterBall/shuiqiu.FBX
+- Assets/Resources/Model/zidan/zidan.fbx
+- Assets/Resources/Model/Wolf/lang@zhuanshen.fbx
+- Assets/Resources/Model/FrozenMachine/bingdong.FBX
+- Assets/Resources/Model/Flower/shirenhua@siwang.FBX
+- Assets/Resources/Model/Ghost/youhun.FBX
+- Assets/Resources/Model/Ghost/youhun@zoulu.FBX
+- Assets/Resources/Model/moxing_01.FBX
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@zidan.fbx
+- Assets/Resources/Model/Bear/baixiong.controller
+- Assets/Resources/Model/OneSpike/Broken.anim
+- Assets/Resources/Model/RotationSpike/xuanzhuanmuci.fbx
+- Assets/Resources/Model/Lion/shizi@zoulu.FBX
+- Assets/Resources/Model/Vampire/xixuegui.controller
+- Assets/Resources/Model/Knight/kulou@siwang.FBX
+- Assets/Resources/Model/Rope/jixieshou@shouhui.fbx
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@zoulu.fbx
+- Assets/Resources/Model/CrossbowShooter/nushou.controller
+- Assets/Resources/Model/Spring/bengchuang@tanya.FBX
+- Assets/Resources/Model/RotationSpike/xuanzhuanmuci 1.fbx
+- Assets/Resources/Model/Materials/sphereshield.mat
+- Assets/Resources/Model/Eagle/ying@feixing.FBX
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@pao.fbx
+- Assets/Resources/Model/Flower/shirenhua@chi.FBX
+- Assets/Resources/Model/Player/HELP.controller
+- Assets/Resources/Model/Tengwan/manteng.controller
+- Assets/Resources/Model/Shooter/shouqiangshou.controller
+- Assets/Resources/Model/Rope/KeepRelease.anim
+- Assets/Resources/Model/Shooter/shouqiangshou@kaiqiang.fbx
+- Assets/Resources/Model/ArrowTrigger/jianshijiguan.fbx
+- Assets/Resources/Model/ShowClear.anim
+- Assets/Resources/Model/Vampire/xixuegui@gongji.fbx
+- Assets/Resources/Model/UseRope/shengsuo.FBX
+- Assets/Resources/Model/Player/zhujue@daiji.fbx
+- Assets/Resources/Model/Player/zhujue.fbx
+- Assets/Resources/Model/Flower/shirenhua.FBX
+- Assets/Resources/Model/Rope/jixieshou@zhuazhu_loop.fbx
+- Assets/Resources/Model/color.psd
+- Assets/Resources/Model/Rope/jixieshou@xiahua.fbx
+- Assets/Resources/Model/CrossbowShooter/nushou@gongji.fbx
+- Assets/Resources/Model/CrossbowShooter/nushou@90sheji.fbx
+- Assets/Resources/Model/Player/zhujue@kaibaoxiang.fbx
+- Assets/Resources/Model/ArrowTrigger/jianshijiguan@gongji.fbx
+- Assets/Resources/Model/Player/zhujue@shiquwuqi.fbx
+- Assets/Resources/Model/ClearBox/baoxiang_dakai.FBX
+- Assets/Resources/Model/Fire/huodui.FBX
+- Assets/Resources/Model/CrossbowShooter/nushou@siwang.fbx
+- Assets/Resources/Model/Player/zhujue@siwang2.fbx
+- Assets/Resources/Model/ArrowTrigger/ArrowTrigger.controller
+- Assets/Resources/Model/ArrowTrigger/jianshijiguan.controller
+- Assets/Resources/Model/Shooter/shouqiangshou@luodi.fbx
+- Assets/Resources/Model/Wolf/lang.controller
+- Assets/Resources/Model/Vampire/bianfu.FBX
+- Assets/Resources/Model/RotationSpike/xuanzhuanmuci.controller
+- Assets/Resources/Model/Wolf/lang@zoulu.fbx
+- Assets/Resources/Model/FrozenMachine/bingdong_posun.FBX
+- Assets/Resources/Model/Rope/Release.anim
+- Assets/Resources/Model/SpikeRoll/juci.fbx
+- Assets/Resources/Model/Teleport/chuansongmen.FBX
+- Assets/Resources/Model/Vampire/bianfu@siwang.FBX
+- Assets/Resources/Model/Tengwan/manteng@shengzhang.FBX
+- Assets/Resources/Model/Lion/shizi@siwang.FBX
+- Assets/Resources/Model/Player/Click.anim
+- Assets/Resources/Model/Rope/jixieshou@dianji.fbx
+- Assets/Resources/Model/AxisFloor/muban_posun.FBX
+- Assets/Resources/Model/Bear/baixiong@siwang.FBX
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@zhuanshen.fbx
+- Assets/Resources/Model/ClearBox/baoxiang@dakai.FBX
+- Assets/Resources/Model/Wolf/lang@gongji.FBX
+- Assets/Resources/Model/Vampire/xixuegui@siwang.fbx
+- Assets/Resources/Model/Rope/Hold.anim
+- Assets/Resources/Model/Rope/jixieshou.controller
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@luodi.fbx
+- Assets/Resources/Model/WindMachine/chuifengji.FBX
+- Assets/Resources/Model/Spike/jianci.FBX
+- Assets/Resources/Model/GemTrigger/baoshijiguan@xiangqian.FBX
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@siwang.fbx
+- Assets/Resources/Model/Knight/kulou@zoulu.FBX
+- Assets/Resources/Model/Rope/jixieshou 1.controller
+- Assets/Resources/Model/Wolf/lang@siwang.FBX
+- Assets/Resources/Model/IceSpike/bingzhui.FBX
+- Assets/Resources/Model/Spring/bengchuang.FBX
+- Assets/Resources/Model/Player/zhujue@pao.fbx
+- Assets/Resources/Model/Eagle/ying@chi.FBX
+- Assets/Resources/Model/Knight/kulou.FBX
+- Assets/Resources/Model/Rope/jixieshou@zhuazhu.fbx
+- Assets/Resources/Model/PatrolShooter/xunluoqiangshou@kaiqiang.fbx
+- Assets/Resources/Model/IceSpike/bingzhui@posun.FBX
+- Assets/Resources/Model/Tengwan/manteng.FBX
+- Assets/Resources/Model/AxisFloor/muban.FBX
+- Assets/Resources/Model/Light/deng.FBX
+- Assets/Resources/Model/Eagle/ying@siwang.FBX
+- Assets/Resources/Model/Knight/kulou.controller
+- Assets/Resources/Model/Player/zhujue@siwang1.fbx
+- Assets/Resources/Model/Shooter/shouqiangshou@zidan.fbx
+- Assets/Resources/Model/SpikeRoll/juci@daoxia.fbx
+- Assets/Resources/Model/SpikeRoll/juci@gundong.fbx
+- Assets/Resources/Model/Vampire/bianfu.controller
+- Assets/Resources/Model/Lion/shizi.controller
+- Assets/Resources/Model/Bear/baixiong.FBX
+- Assets/Resources/Model/Player/zhujue@beikunzhu_gai.fbx
+- Assets/Resources/Model/Eagle/ying.FBX
+- Assets/Resources/Model/Player/zhujue@luodi.fbx
+- Assets/Resources/Model/Ghost/youhun@daiji.fbx
+- Assets/Resources/Model/Rope/jixieshou.FBX
+- Assets/Resources/Model/ArrowTrigger/death.anim
+- Assets/Resources/Model/GemTrigger/baoshijiguan_xiangqian.FBX
+- Assets/Resources/Model/Shooter/shouqiangshou@siwang.fbx
+- Assets/Resources/Model/Player/zhujue@beikunzhu.fbx
+- Assets/Resources/Model/ClearBox/baoxiang.FBX
+- Assets/Resources/Model/Honey/fengmikuai.FBX
+Dependencies:
+- E:/Rescue/AssetBundles/Android/material

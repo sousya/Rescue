@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class FireCtrl: MonoBehaviour, IController
 {
+    private ResLoader mResLoader = ResLoader.Allocate();
     [SerializeField] LayerMask layerMask;
 
     bool _hitPlayer;
@@ -16,6 +16,8 @@ public class FireCtrl: MonoBehaviour, IController
     bool changeTrigger, hasTimes, isAnimalAttack, isFire = true;
     [SerializeField]
     int times = 1, checkTimes = 0, killAnimalLevel;
+    [SerializeField]
+    GameObject fx, FxDeath, showFx;
 
     public bool hitPlayer
     {
@@ -38,6 +40,8 @@ public class FireCtrl: MonoBehaviour, IController
             if (playerCtrl != null)
             {
                 playerCtrl.OnDeath();
+                var fx = mResLoader.LoadSync<GameObject>("fx", "fire");
+                Instantiate(fx, playerCtrl.transform);
                 _hitPlayer = true;
                 return true;
             }
@@ -47,6 +51,8 @@ public class FireCtrl: MonoBehaviour, IController
                 if (shooterCtrl != null)
                 {
                     shooterCtrl.OnDeath();
+                    var fx = mResLoader.LoadSync<GameObject>("fx", "fire");
+                    Instantiate(fx, shooterCtrl.transform);
                     checkTimes++;
                     return false;
 
@@ -59,17 +65,13 @@ public class FireCtrl: MonoBehaviour, IController
                         if(killAnimalLevel > animalCtrl.animalLevel)
                         {
                             animalCtrl.OnDeath();
+                            var fx = mResLoader.LoadSync<GameObject>("fx", "fire");
+                            Instantiate(fx, animalCtrl.transform);
                             checkTimes++;
                             return false;
                         }
                         else
                         {
-                            if(isAnimalAttack)
-                            {
-                                animalCtrl.Defend(transform.parent);
-
-                            }
-                            checkTimes++;
                             return false;
                         }
                     }
@@ -107,6 +109,10 @@ public class FireCtrl: MonoBehaviour, IController
 
     public void Death()
     {
+        gameObject.layer = 18;
         isFire = false;
+
+        showFx.SetActive(false);
+        FxDeath.SetActive(true);
     }
 }

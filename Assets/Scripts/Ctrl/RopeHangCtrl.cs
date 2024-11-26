@@ -4,22 +4,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RopeHangCtrl: MonoBehaviour, IController
 {
-    public float moveSpeed = 1f;
     [HideInInspector]
     public Rigidbody m_rigid;
     [HideInInspector]
     public Collider m_collider;
     public List<CharacterJoint> targetList;
-
+    public delegate void OnUnRopeCall();
+    public OnUnRopeCall onUnRopeCall;
+    public Transform zhuazi;
+    public List<Transform> claws = new List<Transform>();
+    public Rigidbody unlockRotation;
+    public List<RigidbodyConstraints> constraints = new List<RigidbodyConstraints>()
+    {
+        RigidbodyConstraints.FreezeRotationZ,
+        RigidbodyConstraints.FreezePositionZ
+    };
 
     [SerializeField]
-    bool isLock = true;
-    public bool isDeath = false;
+    bool isLock = true, stayX = false;
+    public bool isDeath = false, isOneDrag;
     CharacterJoint[] tempList;
 
 
@@ -28,7 +37,7 @@ public class RopeHangCtrl: MonoBehaviour, IController
         return GameMainArc.Interface;
     }
 
-    private void Awake()
+    private void Start()
     {
 
         m_rigid = GetComponentInChildren<Rigidbody>();
@@ -42,14 +51,15 @@ public class RopeHangCtrl: MonoBehaviour, IController
         RegisterEvent();
     }
 
-
-    private void Start()
-    {
-    }
-
     private void Update()
     {
-
+        if(stayX)
+        {
+            if(targetList.Count != 0)
+            {
+                transform.localRotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y, transform.localRotation.eulerAngles.z);
+            }
+        }
     }
 
     public void SetUseGravity(bool isOn)
@@ -78,12 +88,52 @@ public class RopeHangCtrl: MonoBehaviour, IController
                 if (joint.connectedBody == targetRigid)
                 {
                     targetList.Remove(joint);
+                    Debug.Log("解锁" + joint.gameObject.name);
                     Destroy(joint);
                     //target.gameObject.SetActive(false);
                     break;
                 }
             }
+            if(!isOneDrag)
+            {
+                if (targetList.Count == 0)
+                {
+                    zhuazi.gameObject.SetActive(false);
+
+                }
+            }
+            else
+            {
+                claws[0].gameObject.SetActive(false);
+                claws.RemoveAt(0);
+            }
+
+            if (targetList.Count == 0)
+            {
+                if (unlockRotation != null)
+                {
+                    unlockRotation.constraints = constraints[0];
+                   for(int i = 1; i < constraints.Count; i++)
+                   {
+                        unlockRotation.constraints |= constraints[i];
+                   }
+                    
+                }
+            }
+                
         }
+        else
+        {
+            if(onUnRopeCall != null)
+            {
+                onUnRopeCall();
+            }
+        }
+    }
+
+    public void OnUnRopeAll()
+    {
+
     }
 
     void RegisterEvent()

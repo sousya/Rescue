@@ -5,73 +5,105 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class ElectricCtrl: MonoBehaviour, IController
+public class ElectricCtrl: SpikeCtrl
 {
-    [SerializeField] LayerMask layerMask;
-
-    bool _hitPlayer;
+    private ResLoader mResLoader = ResLoader.Allocate();
     [SerializeField]
-    bool changeTrigger, hasTimes, isAnimalAttack, isFire = true;
-    [SerializeField]
-    int times = 1, checkTimes = 0, killAnimalLevel;
+    GameObject fx;
 
-    public bool hitPlayer
+    public override bool CheckCollider(Transform transform)
     {
-        get
+        if (isDeath || (hasTimes && checkTimes < times))
         {
-            return _hitPlayer;
+            return false;
         }
-    }
 
-    public IArchitecture GetArchitecture()
-    {
-        return GameMainArc.Interface;
-    }
-
-    public virtual bool CheckCollider(Transform player)
-    {
-        if (((1 << player.gameObject.layer) & layerMask) != 0)
+        PlayerCtrl playerCtrl = transform.GetComponent<PlayerCtrl>();
+        if (playerCtrl != null)
         {
-            PlayerCtrl playerCtrl = player.GetComponent<PlayerCtrl>();
-            if (playerCtrl != null)
+
+            if (belongAnimal != null && !playerCtrl.isDeath)
             {
-                playerCtrl.OnDeath();
-                _hitPlayer = true;
-                return true;
+                belongAnimal.transform.DOKill();
+                belongAnimal.OnAttack();
+            }
+
+            playerCtrl.OnDeath();
+            var fx = mResLoader.LoadSync<GameObject>("fx", "lighting");
+            Instantiate(fx, playerCtrl.transform);
+
+            _hitPlayer = true;
+            return true;
+        }
+        else
+        {
+            ShooterCtrl shooterCtrl = transform.GetComponent<ShooterCtrl>();
+            if (shooterCtrl != null)
+            {
+                if (belongAnimal != null && !shooterCtrl.isDeath)
+                {
+                    belongAnimal.transform.DOKill();
+                    belongAnimal.OnAttack();
+                }
+
+                shooterCtrl.OnDeath();
+                var fx = mResLoader.LoadSync<GameObject>("fx", "lighting");
+                Instantiate(fx, shooterCtrl.transform);
+                checkTimes++;
+
+
+                return false;
+
             }
             else
             {
-                ShooterCtrl shooterCtrl = player.GetComponent<ShooterCtrl>();
-                if (shooterCtrl != null)
+                AnimalCtrl animalCtrl = transform.GetComponent<AnimalCtrl>();
+                if (animalCtrl != null)
                 {
-                    shooterCtrl.OnDeath();
-                    checkTimes++;
-                    return false;
+                    if (killAnimalLevel >= animalCtrl.animalLevel)
+                    {
+                        if (belongAnimal != null && !animalCtrl.isDeath)
+                        {
+                            belongAnimal.transform.DOKill();
+                            belongAnimal.OnAttack();
+                        }
 
+                        animalCtrl.OnDeath();
+                        var fx = mResLoader.LoadSync<GameObject>("fx", "lighting");
+                        Instantiate(fx, animalCtrl.transform);
+                        checkTimes++;
+
+
+                        return false;
+                    }
+                    else
+                    {
+                        if (isAnimalAttack)
+                        {
+                            animalCtrl.Defend(base.transform.parent);
+
+                        }
+                        checkTimes++;
+                        return false;
+                    }
                 }
                 else
                 {
-                    AnimalCtrl animalCtrl = player.GetComponent<AnimalCtrl>();
-                    if(animalCtrl != null )
-                    {
-                        if(killAnimalLevel > animalCtrl.animalLevel)
-                        {
-                            animalCtrl.OnDeath();
-                            checkTimes++;
-                            return false;
-                        }
-                        else
-                        {
-                            if(isAnimalAttack)
-                            {
-                                animalCtrl.Defend(transform.parent);
+                    KnightCtrl knightCtrl = transform.GetComponent<KnightCtrl>();
 
-                            }
-                            checkTimes++;
-                            return false;
+                    if (knightCtrl != null)
+                    {
+                        if (isAnimalAttack)
+                        {
+                            base.transform.parent.GetComponent<AnimalCtrl>().OnDeath();
                         }
+
+                        knightCtrl.OnDeath();
+                        var fx = mResLoader.LoadSync<GameObject>("fx", "lighting");
+                        Instantiate(fx, knightCtrl.transform);
+                        checkTimes++;
+                        return false;
                     }
                 }
             }
@@ -81,28 +113,4 @@ public class ElectricCtrl: MonoBehaviour, IController
         }
         return false;
     }
-
-    public virtual void OnTriggerEnter(Collider collision)
-    {
-        if (collision != null && isFire)
-        {
-            Transform player = collision.transform;
-
-            CheckCollider(player);
-        }
-    }
-
-    public virtual void OnCollisionEnter(Collision collision)
-    {
-        if (collision != null && isFire)
-        {
-            Transform player = collision.transform;
-
-            if (!hasTimes || (hasTimes && checkTimes < times))
-            {
-                CheckCollider(player);
-            }
-        }
-    }
-
 }

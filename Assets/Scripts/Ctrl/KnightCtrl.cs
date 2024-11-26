@@ -8,8 +8,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class KnightCtrl : AnimalCtrl
-{
-    public bool isAttract, noAttack, isDefending;
+{ 
+    public bool isAttract, noAttack, isDefending, isRebirth, checkGroundDown = false;
 
     public LayerMask attractLayer;
 
@@ -29,13 +29,43 @@ public class KnightCtrl : AnimalCtrl
             Attack();
         }
 
-        if (canPatrol)
+        if (!CheckStop())
         {
             Patrol();
         }
 
         EditorCheck();
     }
+    public override void Patrol()
+    {
+
+        if (!isRotating && !isAttacking && !CheckStop())
+        {
+            bool onGround = CheckGround();
+            if (CheckFront() || (!onGround && !checkGroundDown))
+            {
+                isRotating = true;
+                transform.DORotateQuaternion(Quaternion.Euler(0, transform.rotation.eulerAngles.y + 180,  0), rotateTime)
+                    .OnComplete(() => {
+                        StartCoroutine(WaitRotateEnd());
+                        faceRight = !faceRight;
+                        if (onGround)
+                        {
+                            transform.position = new Vector3(transform.position.x, transform.position.y, originZ);
+                        }
+                    })
+                    .SetEase(Ease.Linear);
+                //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y + 180, 0);
+            }
+            else
+            {
+                transform.position += transform.right * Time.fixedDeltaTime * speed;
+                PlayAnim("zoulu");
+            }
+        }
+
+    }
+
 
     public void Attract()
     {
@@ -44,7 +74,7 @@ public class KnightCtrl : AnimalCtrl
             if(!isAttract)
             {
               
-                    noAttack = CheckAttract();
+                 noAttack = CheckAttract();
                 if(Mathf.Abs(attractPos.x - transform.position.x)  > moveLength + 0.1f)
                 {
                     isAttract = true;
@@ -85,7 +115,7 @@ public class KnightCtrl : AnimalCtrl
 
     public override bool CheckStop()
     {
-        return isDeath || isStop || noAttack;
+        return isDeath || isStop || noAttack || isRebirth;
     }
 
     public override void Defend(Transform source)
@@ -155,7 +185,16 @@ public class KnightCtrl : AnimalCtrl
         if(life == 1)
         {
             //TODO 变模型
-            Debug.Log("下马");
+            PlayAnim("fuhuo");
+            isRebirth = true;
+            StartCoroutine(WaitRebirth());
         }
+    }
+
+    IEnumerator WaitRebirth()
+    {
+        yield return new WaitForSeconds(2f);
+
+        isRebirth = false;
     }
 }

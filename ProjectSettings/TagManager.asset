@@ -10,7 +10,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NoShow
   - Water
   - UI
   - Player
@@ -24,14 +24,14 @@ TagManager:
   - Attract
   - Knight
   - Ghost
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BrokenFrigs
+  - Death
+  - EffectItem
+  - UnCheckFloor
+  - GemTrigger
+  - EffectTrigger
+  - Juma
+  - UIShow
   - 
   - 
   - 

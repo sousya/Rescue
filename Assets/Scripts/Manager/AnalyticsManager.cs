@@ -4,27 +4,41 @@ using System.Collections.Generic;
 using System.Net;
 using System.Security.Cryptography;
 using Unity.Services.Analytics;
+using Unity.Services.Analytics.Internal;
 using Unity.Services.Core;
 using UnityEngine;
+using Event = Unity.Services.Analytics.Event;
 
 [MonoSingletonPath("[Analytics]/AnalyticsManager")]
 public class AnalyticsManager : MonoSingleton<AnalyticsManager>, ICanGetUtility, ICanSendEvent
 {
+    public class CompleteLevel : Event
+    {
+        public CompleteLevel() : base("completeLevel")
+        {
+        }
 
-    //private async void Start()
-    //{
-    //    await UnityServices.InitializeAsync();
+        public int level { set { SetParameter("level", value); } }
+    }
+    private async void Start()
+    {
+        await UnityServices.InitializeAsync();
 
-    //    ConsentGiven();
-    //}
+        ConsentGiven();
+    }
     void ConsentGiven()
     {
         AnalyticsService.Instance.StartDataCollection();
     }
 
-    public void SendServerEvent(string eventName, Dictionary<string, object> parameters)
+    public void SendCompleteEvent(int level)
     {
-        AnalyticsService.Instance.CustomData(eventName, parameters);
+        CompleteLevel e = new CompleteLevel
+        { 
+            
+            level = level 
+        };
+        AnalyticsService.Instance.RecordEvent(e);
     }
 
     public IArchitecture GetArchitecture()

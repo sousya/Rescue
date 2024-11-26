@@ -1,0 +1,395 @@
+ManifestFileVersion: 0
+CRC: 3553680703
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 24f37de28c6a391240ca5c2a847c870e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e58339d42cb1de113b0142d6941e3ec
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 24f37de28c6a391240ca5c2a847c870e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 59
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9d262396da9816e4c9e51f9435d1cce6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 556a64e393ff85c449e5147592aabdb4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6f925a7fc25877f4dae0b4c35284d3d0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 34cd21a5da91ff74f8db5247e682d39f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2dacc8afbc886d143a4b14707f76b3f7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 98ae1b4b4f5a2404f8adcc76b65d45ec, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9ac39c0d5bd41c74c90c7d2c7a1a237c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0a9d66ca8d9b60c4b81451cb2232ab91, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ea7b283fcd44ab241be8b25ed7c95db3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6e1c144ce1e5a234f950307d7d1736c9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d51719bb3a320c045a6cc1306db4de61, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0082a31c7de1248428b9998e7c29ac14, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 93a7e902026370343b9ab8f558cffa04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 82ec4dc351ca5d549a2521d56c85c3c1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 664283c7082b19a49a697fb1d2c18c2a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b766dd8e12c7ef143b5a124b2fc9c47d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5577e8641d48fde4a90637663d4926db, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 74895e4f4f0b05c4183b4b9747d8691d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7ca35a5036a241146930d9e7e9884c9a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1dd623b2f358e15419b2080200745558, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ac63699e8183ad444ae8d244353bf7d0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: adbcf2129b371bf459ed6c90d81d75e2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8ea2acee1f4b9d946a69b0d8002ac8aa, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b8904418adfb1fa4d80624042138c071, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: caf6a02cb5afc154a9f4854460172be5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9a88e90f668bf2e47900d4eab267a5b4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 385fad86b8963d042bd4b1ae975a2f86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a702979f21f40394c9b63756031e8962, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0dbe3b18b3e354041aa990672a283d98, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0bdf86a2a35c98c41850a8c3f7c393d6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7f001daffb077324a9d5b1737a31d172, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d6ee8089345814046b9c96083d904b86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2195ed46dd94ab64d8fd8b848185794c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 68719ad1d8fde1a4b8685e600212172a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b909f230147259b48844b4bcb13bdab5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 12d17374c57aa4442970b955fac48aea, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0465952d7dbf39c4e9bb32bb37018a08, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dbb6c42de294e744a900c5cac7befbe8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 959e99b8376d7ab499f6e2499917c6bf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 27a79513d2c24a1478e7dae55ec318aa, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b8f59d25044bee640b6235cef7d10e52, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fc97e788240b10e498732cb4e710b1c1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 558c387dd317c4c4fa7e0764188107b9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 47e9b56ccd66cd64593aabd9e2e8b5da, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 537bc3bbc60505c45ad262417f5a8d92, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 70da8cef763709c4789eaca2b3068525, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: af31119e783557d4b8c270dc18ca5401, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 848e3381cd04e624d9b35ce5735cd53a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3a66bb0f022e0944e9359949fc59b9d3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f9d39fb6ec992349872be2696a11a95, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 38d335f5775e2d746aa3dd3d1fce197a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a8bcfc85726ab7147921aa6afd122096, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 63a441bc59f7ab848bab643207ffb8ea, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 57008bed58dc0f841958b5c59725264f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a09f5596625bf6241a366f3c6ac4d683, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e6d77bdf4159b0d4a91be0323caeea07, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 680c5c88385403c488f31790d78f44bf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 14d2086417d3ba94f81f0a16ab622c16, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: db05369c9ef51df4eb9667440641fa1c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 134
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 144
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 1773428102
+  Script: {instanceID: 0}
+- Class: 1818360608
+  Script: {instanceID: 0}
+- Class: 1818360609
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/Prefab/Stages/Stage131.prefab
+- Assets/Resources/Prefab/Bullet.prefab
+- Assets/Resources/Prefab/Stages/Stage61.prefab
+- Assets/Resources/Prefab/Stages/Stage92.prefab
+- Assets/Resources/Prefab/lang.prefab
+- Assets/Resources/Prefab/Stages/Stage96.prefab
+- Assets/Resources/Prefab/Stages/Stage9.prefab
+- Assets/Resources/Prefab/Stages/Stage12.prefab
+- Assets/Resources/Prefab/Stages/Stage11.prefab
+- Assets/Resources/Prefab/Stages/Stage118.prefab
+- Assets/Resources/Prefab/Stages/Stage55.prefab
+- Assets/Resources/Prefab/Stages/Stage83.prefab
+- Assets/Resources/Prefab/Stages/Stage29.prefab
+- Assets/Resources/Prefab/Floor.prefab
+- Assets/Resources/Prefab/Stages/Stage5555555.prefab
+- Assets/Resources/Prefab/Bear.prefab
+- Assets/Resources/Prefab/MovingRope.prefab
+- Assets/Resources/Prefab/Stages/Stage104.prefab
+- Assets/Resources/Prefab/Stages/Stage119.prefab
+- Assets/Resources/Prefab/PushBoxRope.prefab
+- Assets/Resources/Prefab/Stages/Stage107.prefab
+- Assets/Resources/Prefab/Stages/Stage123.prefab
+- Assets/Resources/Prefab/Stages/Stage14.prefab
+- Assets/Resources/Prefab/Stages/Stage33.prefab
+- Assets/Resources/Prefab/Stages/Stage666666.prefab
+- Assets/Resources/Prefab/Stages/Stage68.prefab
+- Assets/Resources/Prefab/Stages/Stage71.prefab
+- Assets/Resources/Prefab/LightSwitch.prefab
+- Assets/Resources/Prefab/Stages/Stage26.prefab
+- Assets/Resources/Prefab/Stages/Stage85.prefab
+- Assets/Resources/Prefab/Stages/Stage36.prefab
+- Assets/Resources/Prefab/Stages/Stage1.prefab
+- Assets/Resources/Prefab/Ghost.prefab
+- Assets/Resources/Prefab/Stages/Stage62.prefab
+- Assets/Resources/Prefab/Stages/Stage69.prefab
+- Assets/Resources/Prefab/PatrolShooter.prefab
+- Assets/Resources/Prefab/Stages/Stage110.prefab
+- Assets/Resources/Prefab/Stages/Stage10101010101010.prefab
+- Assets/Resources/Prefab/Stages/Stage125.prefab
+- Assets/Resources/Prefab/Stages/Stage27.prefab
+- Assets/Resources/Prefab/CrossbowShooter.prefab
+- Assets/Resources/Prefab/HangBlockSet.prefab
+- Assets/Resources/Prefab/Stages/Stage30.prefab
+- Assets/Resources/Prefab/Stages/Stage23.prefab
+- Assets/Resources/Prefab/Stages/Stage25.prefab
+- Assets/Resources/Prefab/Stages/Stage88888888.prefab
+- Assets/Resources/Prefab/Weapon.prefab
+- Assets/Resources/Prefab/Player.prefab
+- Assets/Resources/Prefab/Stages/Stage135.prefab
+- Assets/Resources/Prefab/Stages/Stage51.prefab
+- Assets/Resources/Prefab/Stages/Stage17.prefab
+- Assets/Resources/Prefab/Stages/Stage44.prefab
+- Assets/Resources/Prefab/Wolf.prefab
+- Assets/Resources/Prefab/MoveRope.prefab
+- Assets/Resources/Prefab/IceTrigger.prefab
+- Assets/Resources/Prefab/WallFloor.prefab
+- Assets/Resources/Prefab/Stages/Stage129.prefab
+- Assets/Resources/Prefab/Stages/Stage120.prefab
+- Assets/Resources/Prefab/Stages/Stage13.prefab
+- Assets/Resources/Prefab/Stages/Stage65.prefab
+- Assets/Resources/Prefab/Stages/Stage21.prefab
+- Assets/Resources/Prefab/Stages/Stage54.prefab
+- Assets/Resources/Prefab/Stages/Stage116.prefab
+- Assets/Resources/Prefab/GroundSet.prefab
+- Assets/Resources/Prefab/Stages/Stage78.prefab
+- Assets/Resources/Prefab/Stages/Stage102.prefab
+- Assets/Resources/Prefab/Stages/Stage22.prefab
+- Assets/Resources/Prefab/Stages/Stage64.prefab
+- Assets/Resources/Prefab/SeesawFloor.prefab
+- Assets/Resources/Prefab/Stages/Stage105.prefab
+- Assets/Resources/Prefab/GemTrigger.prefab
+- Assets/Resources/Prefab/Stages/Stage113.prefab
+- Assets/Resources/Prefab/Shooter.prefab
+- Assets/Resources/Prefab/Juma.prefab
+- Assets/Resources/Prefab/Stages/Stage38.prefab
+- Assets/Resources/Prefab/Stages/Stage57.prefab
+- Assets/Resources/Prefab/Stages/Stage97.prefab
+- Assets/Resources/Prefab/Wall.prefab
+- Assets/Resources/Prefab/Stages/Stage98.prefab
+- Assets/Resources/Prefab/Stages/Stage95.prefab
+- Assets/Resources/Prefab/Bomb.prefab
+- Assets/Resources/Prefab/Stages/Stage111.prefab
+- Assets/Resources/Prefab/Stages/Stage81.prefab
+- Assets/Resources/Prefab/BackGround.prefab
+- Assets/Resources/Prefab/Spring.prefab
+- Assets/Resources/Prefab/Stages/Stage101.prefab
+- Assets/Resources/Prefab/Stages/Stage127.prefab
+- Assets/Resources/Prefab/Stages/Stage50.prefab
+- Assets/Resources/Prefab/Stages/Stage66.prefab
+- Assets/Resources/Prefab/Fire.prefab
+- Assets/Resources/Prefab/Stages/Stage24.prefab
+- Assets/Resources/Prefab/zhuazi.prefab
+- Assets/Resources/Prefab/RotationFloor.prefab
+- Assets/Resources/Prefab/Stages/Stage109.prefab
+- Assets/Resources/Prefab/AttackCheck.prefab
+- Assets/Resources/Prefab/Stages/Stage103.prefab
+- Assets/Resources/Prefab/AttractObj.prefab
+- Assets/Resources/Prefab/Stages/Stage41.prefab
+- Assets/Resources/Prefab/Stages/Stage121.prefab
+- Assets/Resources/Prefab/Stages/Stage40.prefab
+- Assets/Resources/Prefab/Stages/Stage108.prefab
+- Assets/Resources/Prefab/Stages/Stage58.prefab
+- Assets/Resources/Prefab/Eagle.prefab
+- Assets/Resources/Prefab/Stages/Stage7.prefab
+- Assets/Resources/Prefab/Spike.prefab
+- Assets/Resources/Prefab/Stages/Stage99.prefab
+- Assets/Resources/Prefab/DoubleRope.prefab
+- Assets/Resources/Prefab/Stages/Stage99999.prefab
+- Assets/Resources/Prefab/Stages/Stage46.prefab
+- Assets/Resources/Prefab/Stages/Stage77.prefab
+- Assets/Resources/Prefab/Stages/Stage100.prefab
+- Assets/Resources/Prefab/Stages/Stage112.prefab
+- Assets/Resources/Prefab/Stages/Stage20.prefab
+- Assets/Resources/Prefab/RopeNew.prefab
+- Assets/Resources/Prefab/Flower.prefab
+- Assets/Resources/Prefab/ArrowBullet.prefab
+- Assets/Resources/Prefab/Stages/Stage115.prefab
+- Assets/Resources/Prefab/Stages/Stage47.prefab
+- Assets/Resources/Prefab/Stages/Stage133.prefab
+- Assets/Resources/Prefab/Stages/Stage34.prefab
+- Assets/Resources/Prefab/Teleport.prefab
+- Assets/Resources/Prefab/Stages/Stage73.prefab
+- Assets/Resources/Prefab/SpikeRoll.prefab
+- Assets/Resources/Prefab/Honey.prefab
+- Assets/Resources/Prefab/Stages/Stage31.prefab
+- Assets/Resources/Prefab/BrokenFloor.prefab
+- Assets/Resources/Prefab/Frozen.prefab
+- Assets/Resources/Prefab/Stages/Stage87.prefab
+- Assets/Resources/Prefab/Stages/Stage53.prefab
+- Assets/Resources/Prefab/Stages/Stage60.prefab
+- Assets/Resources/Prefab/Ball.prefab
+- Assets/Resources/Prefab/Stages/Stage134.prefab
+- Assets/Resources/Prefab/Stages/Stage91.prefab
+- Assets/Resources/Prefab/Knight.prefab
+- Assets/Resources/Prefab/Stages/Stage8.prefab
+- Assets/Resources/Prefab/Stages/Stage128.prefab
+- Assets/Resources/Prefab/Electric.prefab
+- Assets/Resources/Prefab/Stages/Stage32.prefab
+- Assets/Resources/Prefab/Vampire.prefab
+- Assets/Resources/Prefab/Stages/Stage94.prefab
+- Assets/Resources/Prefab/Tengwan.prefab
+- Assets/Resources/Prefab/Stages/Stage48.prefab
+- Assets/Resources/Prefab/Stages/Stage28.prefab
+- Assets/Resources/Prefab/Stages/Stage126.prefab
+- Assets/Resources/Prefab/Stages/Stage35.prefab
+- Assets/Resources/Prefab/Stages/Stage122.prefab
+- Assets/Resources/Prefab/Stages/Stage37.prefab
+- Assets/Resources/Prefab/Stages/Stage89.prefab
+- Assets/Resources/Prefab/Stages/Stage3.prefab
+- Assets/Resources/Prefab/PlayerBullet.prefab
+- Assets/Resources/Prefab/Stages/Stage333333.prefab
+- Assets/Resources/Prefab/Stages/Stage4444444444.prefab
+- Assets/Resources/Prefab/Stages/Stage52.prefab
+- Assets/Resources/Prefab/MoveSet.prefab
+- Assets/Resources/Prefab/Stages/Stage18.prefab
+- Assets/Resources/Prefab/Stages/Stage49.prefab
+- Assets/Resources/Prefab/Stages/Stage15.prefab
+- Assets/Resources/Prefab/Stages/Stage88.prefab
+- Assets/Resources/Prefab/Stages/Stage10.prefab
+- Assets/Resources/Prefab/Stages/Stage124.prefab
+- Assets/Resources/Prefab/ArrowTrigger.prefab
+- Assets/Resources/Prefab/Light.prefab
+- Assets/Resources/Prefab/Stages/Stage43.prefab
+- Assets/Resources/Prefab/Stages/Stage5.prefab
+- Assets/Resources/Prefab/Stages/Stage16.prefab
+- Assets/Resources/Prefab/Stages/Stage2.prefab
+- Assets/Resources/Prefab/Stages/Stage130.prefab
+- Assets/Resources/Prefab/Stages/Stage63.prefab
+- Assets/Resources/Prefab/Stages/Stage76.prefab
+- Assets/Resources/Prefab/Stages/Stage82.prefab
+- Assets/Resources/Prefab/Stages/Stage117.prefab
+- Assets/Resources/Prefab/Stages/Stage39.prefab
+- Assets/Resources/Prefab/Stages/Stage59.prefab
+- Assets/Resources/Prefab/Powder.prefab
+- Assets/Resources/Prefab/Stages/Stage80.prefab
+- Assets/Resources/Prefab/CatchRotationSpike.prefab
+- Assets/Resources/Prefab/Stages/Stage56.prefab
+- Assets/Resources/Prefab/PowderShooter.prefab
+- Assets/Resources/Prefab/Box.prefab
+- Assets/Resources/Prefab/Stages/Stage4.prefab
+- Assets/Resources/Prefab/Stages/Stage70.prefab
+- Assets/Resources/Prefab/Stages/Stage93.prefab
+- Assets/Resources/Prefab/Stages/Stage86.prefab
+- Assets/Resources/Prefab/Stages/Stage75.prefab
+- Assets/Resources/Prefab/Stages/Stage72.prefab
+- Assets/Resources/Prefab/Stages/Stage7777777.prefab
+- Assets/Resources/Prefab/Stages/Stage6.prefab
+- Assets/Resources/Prefab/Stages/Stage90.prefab
+- Assets/Resources/Prefab/Stages/Stage132.prefab
+- Assets/Resources/Prefab/Stages/Stage42.prefab
+- Assets/Resources/Prefab/Stages/Stage45.prefab
+- Assets/Resources/Prefab/Stages/Stage79.prefab
+- Assets/Resources/Prefab/Stages/Stage74.prefab
+- Assets/Resources/Prefab/Stages/Stage106.prefab
+- Assets/Resources/Prefab/Stages/Stage114.prefab
+- Assets/Resources/Prefab/WindMachine.prefab
+- Assets/Resources/Prefab/AxisFloor.prefab
+- Assets/Resources/Prefab/Lion.prefab
+- Assets/Resources/Prefab/Stages/Stage19.prefab
+- Assets/Resources/Prefab/Stages/Stage67.prefab
+- Assets/Resources/Prefab/Water.prefab
+- Assets/Resources/Prefab/Stages/Stage84.prefab
+Dependencies:
+- E:/Rescue/AssetBundles/Android/fx
+- E:/Rescue/AssetBundles/Android/material
+- E:/Rescue/AssetBundles/Android/model
+- E:/Rescue/AssetBundles/Android/sprites

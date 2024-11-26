@@ -5,18 +5,21 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class SpikeCtrl: MonoBehaviour, IController
+public class SpikeCtrl: MonoBehaviour, IController,ICanSendEvent
 {
     public LayerMask layerMask;
 
-    bool _hitPlayer;
-    public bool changeTrigger, hasTimes, isAnimalAttack;
-    public int times = 1, checkTimes = 0, killAnimalLevel;
+    public bool _hitPlayer;
+    public bool changeTrigger, hasTimes, isAnimalAttack, isDeath, oneKillKnight, isKnightAttack;
+    public int times = 1, checkTimes = 0, killAnimalLevel, useDeath = 2;
     public AnimalCtrl belongAnimal;
+    //public KnightCtrl belongKnight;
+    public Animator anim;
+    public GameObject NormalNode, BrokenNode;
 
     public Rigidbody m_rigidBody;
+    public List<Rigidbody> rigidBodies;
 
     public bool hitPlayer
     {
@@ -36,51 +39,87 @@ public class SpikeCtrl: MonoBehaviour, IController
         m_rigidBody = GetComponent<Rigidbody>();
     }
 
-    public virtual bool CheckCollider(Transform player)
+    private void Update()
     {
-        if (((1 << player.gameObject.layer) & layerMask) != 0)
+        if(Input.GetKeyDown(KeyCode.F1)) 
         {
-            
+            OnDeath();
+        }
+    }
 
-            PlayerCtrl playerCtrl = player.GetComponent<PlayerCtrl>();
-            if (playerCtrl != null)
+    public virtual bool CheckCollider(Transform transform)
+    {
+        if(isDeath || (hasTimes && checkTimes >= times) || transform == this.transform.parent)
+        {
+            return false;
+        }
+
+        PlayerCtrl playerCtrl = transform.GetComponent<PlayerCtrl>();
+        if (playerCtrl != null)
+        {
+
+            if (belongAnimal != null && !playerCtrl.isDeath)
             {
+                //belongAnimal.transform.DOKill();
+                belongAnimal.OnAttack();
+            }
 
-                if (belongAnimal != null && !playerCtrl.isDeath)
+            playerCtrl.OnDeath(useDeath);
+
+            _hitPlayer = true;
+            return true;
+        }
+        else
+        {
+            ShooterCtrl shooterCtrl = transform.GetComponent<ShooterCtrl>();
+            if (shooterCtrl != null)
+            {
+                if (belongAnimal != null && !shooterCtrl.isDeath && !isKnightAttack)
                 {
                     belongAnimal.transform.DOKill();
                     belongAnimal.OnAttack();
                 }
 
-                playerCtrl.OnDeath();
+                if(isKnightAttack)
+                {
+                    belongAnimal.OnDeath();
+                }
 
-                _hitPlayer = true;
-                return true;
+                shooterCtrl.OnDeath();
+                checkTimes++;
+
+
+                return false;
+
             }
             else
             {
-                ShooterCtrl shooterCtrl = player.GetComponent<ShooterCtrl>();
-                if (shooterCtrl != null)
+                KnightCtrl knightCtrl = transform.GetComponent<KnightCtrl>();
+
+                if (knightCtrl != null)
                 {
-                    if (belongAnimal != null && !shooterCtrl.isDeath)
+                    if (isAnimalAttack)
                     {
-                        belongAnimal.transform.DOKill();
-                        belongAnimal.OnAttack();
+                        this.transform.parent.GetComponent<AnimalCtrl>().OnDeath();
                     }
 
-                    shooterCtrl.OnDeath();
+
+
+                    if(oneKillKnight)
+                    {
+                        knightCtrl.OnDeath();
+                    }
+
+                    knightCtrl.OnDeath();
                     checkTimes++;
-
-                    
                     return false;
-
-                }
+                }              
                 else
                 {
-                    AnimalCtrl animalCtrl = player.GetComponent<AnimalCtrl>();
+                    AnimalCtrl animalCtrl = transform.GetComponent<AnimalCtrl>();
                     if (animalCtrl != null)
                     {
-                        if (killAnimalLevel >= animalCtrl.animalLevel)
+                        if (killAnimalLevel > animalCtrl.animalLevel)
                         {
                             if (belongAnimal != null && !animalCtrl.isDeath)
                             {
@@ -98,29 +137,13 @@ public class SpikeCtrl: MonoBehaviour, IController
                         {
                             if (isAnimalAttack)
                             {
-                                animalCtrl.Defend(transform.parent);
+                                animalCtrl.Defend(base.transform.parent);
 
                             }
                             checkTimes++;
                             return false;
                         }
                     }
-                    else
-                    {
-                        KnightCtrl knightCtrl = player.GetComponent<KnightCtrl>();
-
-                        if (knightCtrl != null)
-                        {
-                            if (isAnimalAttack)
-                            {
-                                transform.parent.GetComponent<AnimalCtrl>().OnDeath();
-                            }
-
-                            knightCtrl.OnDeath();
-                            checkTimes++;
-                            return false;
-                        }
-                    } 
                 }
             }
 
@@ -135,8 +158,10 @@ public class SpikeCtrl: MonoBehaviour, IController
         if (collision != null)
         {
             Transform player = collision.transform;
-
-            CheckCollider(player);
+            if(player != transform.parent)
+            {
+                CheckCollider(player);
+            }
         }
     }
 
@@ -145,11 +170,19 @@ public class SpikeCtrl: MonoBehaviour, IController
         if (collision != null)
         {
             Transform player = collision.transform;
-
-            if (!hasTimes || (hasTimes && checkTimes < times))
-            {
-                CheckCollider(player);
-            }
+            CheckCollider(player);
         }
+    }
+
+    public void OnDeath()
+    {
+        //foreach (var b in rigidBodies)
+        //{
+        //    b.useGravity = true;
+        //    b.isKinematic = false;
+        //}
+
+        isDeath = true;
+        
     }
 }

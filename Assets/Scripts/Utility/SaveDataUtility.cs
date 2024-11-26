@@ -4,51 +4,106 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameDefine;
 using System;
+using Unity.VisualScripting;
 
 public class SaveDataUtility : IUtility
 {
     public void SaveLevel(int level)
     {
-        int clearLevel = PlayerPrefs.GetInt("g_ClearLevel", 0);
-        int clearNowLevel = (int)Mathf.Pow(2, level - 1);
         //Debug.Log("LevelBefore " + Convert.ToString(clearLevel, 2) + " clearNowLevel " + clearNowLevel + " LevelNow " + Convert.ToString((clearLevel | clearNowLevel), 2));
-        clearLevel = clearLevel | clearNowLevel;
-        PlayerPrefs.SetInt("g_ClearLevel", clearLevel);
+        PlayerPrefs.SetInt("g_ClearLevel", level);
 
     }
-
-    public bool GetLevelClear(int level)
+    public int GetLevelClear()
     {
-        int clearLevel = PlayerPrefs.GetInt("g_ClearLevel", 0);
-        int checkLevel = (int)Mathf.Pow(2, level - 1);
-        int isClear = clearLevel & checkLevel;
-        if(isClear == 0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        int clearLevel = PlayerPrefs.GetInt("g_ClearLevel", 1);
+       return clearLevel;
+    }
+    public void SaveUnlock(int unlock)
+    {
+        //Debug.Log("LevelBefore " + Convert.ToString(clearLevel, 2) + " clearNowLevel " + clearNowLevel + " LevelNow " + Convert.ToString((clearLevel | clearNowLevel), 2));
+        PlayerPrefs.SetInt("g_UnlockHeart", unlock);
+
+    }
+    public int GetSaveUnlock()
+    {
+        int clearLevel = PlayerPrefs.GetInt("g_UnlockHeart", 0);
+        return clearLevel;
+    }
+
+
+    public void SetVitality(int num)
+    {
+        SetVitalityTime();
+        SetVitalityNum(num);
     }
     
-    public void ClearSaveLevel()
+    public void CostVitality()
     {
-        PlayerPrefs.SetInt("g_ClearLevel", 0);
+        if(LevelManager.Instance.NoCostVitality)
+        {
+            return;
+        }
+        int lastVitalityNum = GetVitalityNum();
+        SetVitality(lastVitalityNum - 1);
+    }
+    
+    public void SetVitality(int num, string time)
+    {
+        SetVitalityTime(time);
+        SetVitalityNum(num);
     }
 
-    public int GetClearLevelNum()
+    public long GetNowTime()
     {
-        int num = 0;
-        for(int i = 1; i <= GameConst.totalLeveNum; i++)
-        {
-            if(GetLevelClear(i))
-            {
-                num++;
-            }
-        }
+        DateTime now = DateTime.Now;
+        long unixTimestamp = now.ToUniversalTime().Ticks - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).Ticks;
+        long time = (unixTimestamp / 10000000);
 
-        return num;
+        return time;
+    }
+
+    public void UseVitality()
+    {
+        SetVitality(GetVitalityNum() - 1);
+    }
+
+    public void SetVitalityTime(string time)
+    {       
+        PlayerPrefs.SetString("g_VitalityTime", time);
+    }
+
+    public void SetVitalityTime()
+    {       
+        PlayerPrefs.SetString("g_VitalityTime", GetNowTime() + "");
+    }
+    public long GetVitalityTime()
+    {
+        string timeStr = PlayerPrefs.GetString("g_VitalityTime", "0");
+        long time = long.Parse(timeStr);
+        return time;
+    }
+
+    public void SetVitalityNum(int num)
+    {
+        PlayerPrefs.SetInt("g_VitalityNum", num);
+    }
+
+    public void AddVitalityNum()
+    {
+        var v = PlayerPrefs.GetInt("g_VitalityNum", GameConst.MaxVitality);
+        //v += 1;
+        //if(v > 5)
+        //{
+            v = 5;
+        //}
+        PlayerPrefs.SetInt("g_VitalityNum", v);
+    }
+
+
+    public int GetVitalityNum()
+    {
+        return PlayerPrefs.GetInt("g_VitalityNum", GameConst.MaxVitality);
     }
 
     public string GetSelectLanguage()
@@ -70,21 +125,4 @@ public class SaveDataUtility : IUtility
         PlayerPrefs.SetString("g_Language", language);
     }
 
-    public void SaveLevelEndTag(GameType gameType, int tag)
-    {
-        PlayerPrefs.SetInt("g_LevelEnd" + gameType, tag);
-    }
-
-    public int GetLevelEndTag(GameType gameType)
-    {
-        return PlayerPrefs.GetInt("g_LevelEnd" + gameType, -1);
-    }
-
-    public void ClearAllEndTag()
-    {
-        foreach(GameType gameType in System.Enum.GetValues(typeof(GameType)))
-        {
-            SaveLevelEndTag(gameType, -1);
-        }
-    }
 }

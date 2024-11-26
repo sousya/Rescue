@@ -9,3 +9,17 @@ public struct LevelClearEvent
 {
     public int level;
 }
+
+/// <summary>
+/// 加体力
+/// </summary>
+public struct AddVitality
+{
+}
+
+/// <summary>
+/// 跳关
+/// </summary>
+public struct SkipLevel
+{
+}

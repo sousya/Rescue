@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class IceTriggerCtrl: MonoBehaviour, IController
 {
-    public Transform shootPoint;
+    public Transform shootPoint, fixPoint;
     public SpikeCtrl bulletPrefab;
     public LayerMask layerMask;
     public bool hasTarget = false, isDeath = false;
@@ -42,7 +42,11 @@ public class IceTriggerCtrl: MonoBehaviour, IController
 
     public virtual void Update()
     {
-            Attack();
+        if(!isDeath)
+        {
+            bulletPrefab.transform.position = fixPoint.position;
+        }
+       Attack();
     }
 
     public virtual void FixedUpdate()
@@ -97,4 +101,14 @@ public class IceTriggerCtrl: MonoBehaviour, IController
         RemoveList(e.rope);
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision != null)
+        {
+            if(collision.gameObject.layer == 11)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

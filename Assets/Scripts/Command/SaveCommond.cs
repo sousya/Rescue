@@ -7,6 +7,6 @@ public class SaveCommond : AbstractCommand
 {
     protected override void OnExecute()
     {
-        this.SendEvent<LevelClearEvent>();
+        //this.SendEvent<LevelClearEvent>();
     }
 }

@@ -13,6 +13,12 @@ public class BrokenFloorCtrl : MonoBehaviour, IController
     public Rigidbody m_rigid;
     [HideInInspector]
     public Collider m_collider;
+    public List<Rigidbody> rigidBodies;
+    public List<Transform> hideLists;
+    public List<Transform> showLists;
+    public FloorCtrl floor;
+    public SpikeCtrl spike, spike1;
+
 
     public IArchitecture GetArchitecture()
     {
@@ -33,7 +39,26 @@ public class BrokenFloorCtrl : MonoBehaviour, IController
 
     public void OnDeath()
     {
-        Destroy(gameObject);
+        foreach (var b in rigidBodies)
+        {
+            if (b != null)
+            {
+                b.useGravity = true;
+                b.isKinematic = false;
+                b.AddForce(100, 100, 0);
+            }
+        }
+        if(spike != null)
+        {
+            spike.OnDeath();
+        }
+        if(spike1 != null)
+        {
+            spike1.OnDeath();
+        }
+
+        floor.m_collider.enabled = false;
+
     }
 
 }

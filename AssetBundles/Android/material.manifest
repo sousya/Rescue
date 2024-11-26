@@ -1,0 +1,58 @@
+ManifestFileVersion: 0
+CRC: 118473225
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 69d20e43f90c52f4b0eb9603a2e527eb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b30fce1a9ad74efb72be6c308c56e365
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 69d20e43f90c52f4b0eb9603a2e527eb
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/Material/background2.mat
+- Assets/Resources/Material/Wood.mat
+- Assets/Resources/Material/cubeColor.mat
+- Assets/Resources/Material/caizhi_06.mat
+- Assets/Resources/Material/caizhi_56.mat
+- Assets/Resources/Material/cameraColor.mat
+- Assets/Resources/Material/caizhi_10.mat
+- Assets/Resources/Material/caizhi_54.mat
+- Assets/Resources/Material/teleport.mat
+- Assets/Resources/Material/zhuazi.mat
+- Assets/Resources/Material/caizhi_01.mat
+- Assets/Resources/Material/caizhi_04.mat
+- Assets/Resources/Material/Button.mat
+- Assets/Resources/Material/color.mat
+- Assets/Resources/Material/caizhi_03.mat
+- Assets/Resources/Material/caizhi_09.mat
+- Assets/Resources/Material/caizhi_05.mat
+- Assets/Resources/Material/background3.mat
+- Assets/Resources/Material/background1.mat
+- Assets/Resources/Material/caizhi_51.mat
+- Assets/Resources/Material/caizhi_52.mat
+- Assets/Resources/Material/caizhi_59.mat
+- Assets/Resources/Material/lang.mat
+- Assets/Resources/Material/caizhi_08.mat
+- Assets/Resources/Material/caizh_11.mat
+- Assets/Resources/Material/caizhi_02.mat
+- Assets/Resources/Material/youling.mat
+- Assets/Resources/Material/caizhi_07.mat
+- Assets/Resources/Material/background.mat
+- Assets/Resources/Material/caizhi_58.mat
+- Assets/Resources/Material/bianfu.mat
+- Assets/Resources/Material/caizhi_55.mat
+- Assets/Resources/Material/BgPlane.mat
+- Assets/Resources/Material/caizhi_53.mat
+- Assets/Resources/Material/caizhi_57.mat
+Dependencies: []

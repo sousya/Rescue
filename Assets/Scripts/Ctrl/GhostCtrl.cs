@@ -19,12 +19,17 @@ public class GhostCtrl : AnimalCtrl
 
     public Transform attractCheck;
 
-    StageModel stageModel;
+    public StageModel stageModel;
 
     public override void Start()
     {
         base.Start();
         stageModel = this.GetModel<StageModel>();
+
+        this.RegisterEvent<SwitchLightEvent>(e =>
+        {
+            OnDeath();
+        }).UnRegisterWhenGameObjectDestroyed(gameObject);
     }
     public override void FixedUpdate()
     {
@@ -66,49 +71,11 @@ public class GhostCtrl : AnimalCtrl
         base.Defend(source);
     }
 
-    public bool CheckAttract()
+    public override void CheckAttack()
     {
-        RaycastHit hit1 = new RaycastHit();
-        RaycastHit hit2 = new RaycastHit();
-        bool hasTarget = Physics.Raycast(attractCheck.position, transform.right, out hit1, attractRange, attractLayer) ||
-               Physics.Raycast(attractCheck.position, -transform.right, out hit2, attractRange, attractLayer);
-        if(hasTarget)
-        {
-            if(hit1.transform != null)
-            {
-                AttractCtrl attract = hit1.transform.GetComponent<AttractCtrl>();
-                if(attract != null ) 
-                {
-                    if(CheckAttractType(attract.type))
-                    {
-                        attractPos = hit1.point;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-
-            }
-            else if(hit2.transform != null)
-            {
-                AttractCtrl attract = hit2.transform.GetComponent<AttractCtrl>();
-                if (attract != null)
-                {
-                    if (CheckAttractType(attract.type))
-                    {
-                        attractPos = hit2.point;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-            }
-        }
-        //Debug.DrawRay(right.position, transform.right, Color.blue, checkFrontRange);
-        return hasTarget;
-
+        if (stageModel.nowStage.isLight)
+            return;
+        base.CheckAttack();
     }
 
     public bool CheckAttractType(GameDefine.AttractType type)
@@ -124,6 +91,8 @@ public class GhostCtrl : AnimalCtrl
 
     public override void OnDeath()
     {
-       
+        isDeath = true;
+        attackCheck.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

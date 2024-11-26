@@ -8,6 +8,7 @@ public class AttractCtrl : MonoBehaviour, IController
 {
     public AttractType type;
 
+    public bool cantAttack = false;
     public IArchitecture GetArchitecture()
     {
         return GameMainArc.Interface;

@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 2928598039
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6b191963bb175c26ed2e3f6323cf11db
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f0fe833688f240a4b125ab46370fd01d
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6b191963bb175c26ed2e3f6323cf11db
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/Fx/deng.prefab
+- Assets/Resources/Fx/fire.prefab
+- Assets/Resources/Fx/baozha.prefab
+- Assets/Resources/Fx/bingqi.prefab
+- Assets/Resources/Fx/ximie.prefab
+- Assets/Resources/Fx/lighting.prefab
+- Assets/Resources/Fx/Shuihua.prefab
+- Assets/Resources/Fx/ice.prefab
+- Assets/Resources/Fx/wind.prefab
+Dependencies:
+- E:/Rescue/AssetBundles/Android/material
+- E:/Rescue/AssetBundles/Android/model
+- E:/Rescue/AssetBundles/Android/sprites

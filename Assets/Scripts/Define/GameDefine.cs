@@ -21,6 +21,19 @@ namespace GameDefine
         War = 11,
     }
 
+    public enum AnimType
+    {
+        Death1 = 1,
+        Death2 = 2,
+        Death3 = 3,
+        Run = 4,
+        Shoot = 5,
+        Win = 6,
+        Fallen = 7,
+        Idle = 8,
+        Ground = 9,
+    }
+
     public enum LanguageType
     {
         zh = 0,
@@ -46,6 +59,7 @@ namespace GameDefine
 
     public static class GameConst
     {
-        public static int totalLeveNum = 6;
+        public const int MaxVitality = 5;
+        public const int RecoveryTime = 270;
     }
 }

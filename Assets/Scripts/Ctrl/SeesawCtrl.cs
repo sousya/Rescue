@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class SeesawCtrl : MonoBehaviour, IController
+public class SeesawCtrl : MonoBehaviour, IController, ICanSendEvent
 {
     public LayerMask layerMask;
 
@@ -28,52 +28,8 @@ public class SeesawCtrl : MonoBehaviour, IController
 
     private void Awake()
     {
-        //m_rigid = GetComponent<Rigidbody>();
-        //m_collider = GetComponent<Collider>();
-        //tempList = GetComponents<CharacterJoint>();
-        //foreach (CharacterJoint joint in tempList)
-        //{
-        //    targetList.Add(joint);
-        //}
-        //tempList = null;
-
-        ////SetUseGravity(false);
-        //RegisterEvent();
         pushObject.GetComponent<Rigidbody>().useGravity = false;
     }
-
-    void RegisterEvent()
-    {
-        this.RegisterEvent<UnRopeEvent>(e =>
-        {
-            OnUnRope(e);
-        }).UnRegisterWhenGameObjectDestroyed(gameObject);
-    }
-
-    void OnUnRope(UnRopeEvent e)
-    {
-        RemoveList(e.rope);
-    }
-
-    public void RemoveList(Transform target)
-    {
-        Rigidbody targetRigid = target.GetComponent<Rigidbody>();
-
-        if (targetList.Count > 0)
-        {
-            foreach (CharacterJoint joint in targetList)
-            {
-                if (joint.connectedBody == targetRigid)
-                {
-                    targetList.Remove(joint);
-                    Destroy(joint);
-                    target.gameObject.SetActive(false);
-                    break;
-                }
-            }
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision != null)
@@ -82,7 +38,6 @@ public class SeesawCtrl : MonoBehaviour, IController
 
             if (((1 << player.gameObject.layer) & layerMask) != 0)
             {
-                Debug.Log("Seasaw");
                 //playerCtrl.OnDeath();
                 Sequence s = DOTween.Sequence();
                 //定义一共2秒的 x 轴移动
@@ -100,6 +55,9 @@ public class SeesawCtrl : MonoBehaviour, IController
                     //eff.SetActive(false);
                     pushObject.GetComponent<Rigidbody>().useGravity = true;
                 });
+
+                this.SendEvent<SetSequence>(new SetSequence { go = pushObject.gameObject, s = s });
+
             }
         }
     }

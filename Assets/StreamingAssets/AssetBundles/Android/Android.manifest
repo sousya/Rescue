@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 1249901318
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: material
+      Dependencies: {}
+    Info_1:
+      Name: fx
+      Dependencies:
+        Dependency_0: material
+        Dependency_1: model
+        Dependency_2: sprites
+    Info_2:
+      Name: model
+      Dependencies:
+        Dependency_0: material
+    Info_3:
+      Name: prefab
+      Dependencies:
+        Dependency_0: material
+        Dependency_1: fx
+        Dependency_2: model
+        Dependency_3: sprites
+    Info_4:
+      Name: sprites
+      Dependencies: {}
+    Info_5:
+      Name: uilevelclear_prefab
+      Dependencies:
+        Dependency_0: sprites
+    Info_6:
+      Name: uilevelmain_prefab
+      Dependencies:
+        Dependency_0: sprites
+    Info_7:
+      Name: uileveladdheart_prefab
+      Dependencies:
+        Dependency_0: sprites
